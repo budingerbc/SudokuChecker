@@ -18,7 +18,7 @@ SudokuChecker.prototype.getRow = function(row) {
 SudokuChecker.prototype.getColumn = function(col) {
 
   var columnArray = [];
-  for (i = 0; i < 9; i++) {
+  for (let i = 0; i < 9; i++) {
     columnArray.push(this.board[i][col - 1]);
   }
   return columnArray;
@@ -27,7 +27,7 @@ SudokuChecker.prototype.getColumn = function(col) {
 SudokuChecker.prototype.checkRow = function(row) {
 
   var sortedRow = this.getRow(row).sort();
-  for(i = 0; i < sortedRow.length; i++)
+  for(let i = 0; i < sortedRow.length; i++)
   {
     if(i+1 !== sortedRow[i])
     {
@@ -40,7 +40,7 @@ SudokuChecker.prototype.checkRow = function(row) {
 SudokuChecker.prototype.checkColumn = function(col) {
 
   var sortedColumn = this.getColumn(col).sort();
-  for(i = 0; i < sortedColumn.length; i++) {
+  for(let i = 0; i < sortedColumn.length; i++) {
     if(i+1 !== sortedColumn[i]) {
       return false;
     }
